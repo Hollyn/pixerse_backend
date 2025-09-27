@@ -1,13 +1,6 @@
 services:
   strapi:
-    build:
-      context: .
-      args:
-        ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-        API_TOKEN_SALT: ${API_TOKEN_SALT}
-        TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
-        ENCRYPTION_KEY: ${ENCRYPTION_KEY}
-        APP_KEYS: ${APP_KEYS}
+    build: .
     container_name: strapi
     restart: always
     env_file: .env
