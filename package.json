@@ -19,10 +19,13 @@
     "@strapi/plugin-users-permissions": "5.24.0",
     "@strapi/strapi": "5.24.0",
     "@tailwindcss/postcss": "^4.1.13",
+    "autoprefixer": "^10.4.20",
+    "cloudinary": "^2.5.0",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "@strapi/provider-upload-cloudinary": "^4.0.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
