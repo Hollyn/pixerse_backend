@@ -1,21 +1,23 @@
 FROM node:18-alpine
 
+# Set memory limits for Node.js
+ENV NODE_OPTIONS="--max-old-space-size=1536"
+
 WORKDIR /app
 
-# Copy package files
+# Install dependencies first (better caching)
 COPY package*.json ./
-
-# Install all dependencies (including dev dependencies for build)
 RUN npm install
 
-# Copy source code
+# Copy source files
 COPY . .
 
-# Build the application
+# Build with memory limit
 RUN npm run build
 
-# Remove dev dependencies to reduce image size
-#RUN npm prune --production
+# Clean up dev dependencies after build
+RUN npm prune --production
 
 EXPOSE 1337
+
 CMD ["npm", "run", "start"]
