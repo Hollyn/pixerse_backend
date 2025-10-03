@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "Faq"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "enumeration",
+      "enum": [
+        "AI",
+        "DEVELOPMENT",
+        "PRICING",
+        "DESIGN",
+        "UI/UX"
+      ]
+    },
+    "is_display": {
+      "type": "boolean",
+      "default": false
+    },
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "richtext"
+    }
+  }
+}

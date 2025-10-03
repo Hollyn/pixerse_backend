@@ -28,6 +28,9 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "inversedBy": "members"
+    },
+    "linkedin": {
+      "type": "string"
     }
   }
 }
